@@ -2,6 +2,7 @@
 
 const tues4th = document.querySelector(".tues4th");
 const expBtn = document.querySelector(".expBtn");
+const timerBtn = document.querySelector(".timerBtn");
 
 // identify day of the week and highlight it
 const weekday = [
@@ -39,6 +40,12 @@ tues4th.addEventListener("click", () => {
 
 expBtn.addEventListener("click", () => {
   prompt("Choose format");
+});
+
+timerBtn.addEventListener("click", () => {
+  alert(
+    "Not done this bit yet \n It will be a Pomodoro-type Timer when it is done."
+  );
 });
 
 // ideas for this app
