@@ -1,5 +1,14 @@
 "use strict";
 
+// populate top row cells
+// populate vertical row cells
+
+const columnHeadings = ["Mon", "Tues", "Weds", "Thur", "Fri", "Sat", "Sun"];
+
+for (let day of columnHeadings) {
+  console.log(day);
+}
+
 const tues4th = document.querySelector(".tues4th");
 const expBtn = document.querySelector(".expBtn");
 const timerBtn = document.querySelector(".timerBtn");
@@ -16,7 +25,6 @@ const weekday = [
 ];
 let today = new Date();
 let thisDay = weekday[today.getDay()];
-console.log(thisDay);
 
 // let cols = document.getElementsByTagName("col");
 // console.log(cols)
