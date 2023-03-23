@@ -14,17 +14,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TimeTabler</title>
+    <script src="script.js" type="module" defer></script>
   </head>
   <body>
     <div class="header-wrapper">
       <h1>TimeTabler</h1>
-      <h3>A Simple HTML TimeTabling App</h3>
+      <h3 id="message-area"></h3>
     </div>
 
-    <button>Save Timetable</button>
+    <button class="saveBtn">Save Timetable</button>
     <button class="expBtn">Export Timetable</button>
     <button class="newWkBtn">New Week</button>
-    <button class="timerBtn">Timer</button>
+    <button id="timerBtn">Timer</button>
     <button class="settingsBtn">Settings</button>
 
     <table>
@@ -39,7 +40,7 @@
         <col id="Sunday" />
       </colgroup>
       <tr>
-        <td>&nbsp;</td>
+        <td></td>
         <th>Mon</th>
         <th>Tues</th>
         <th>Wed</th>
@@ -62,156 +63,154 @@
       <tr>
         <th>11:00</th>
         <td></td>
-        <td><button class="tues4th">TBD</button></td>
-        <td>&nbsp;</td>
         <td></td>
         <td></td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
       </tr>
       <tr>
         <th>12:00</th>
-        <td>&nbsp;</td>
-        <td><button class="tues4th">TBD</button></td>
-        <td>&nbsp;</td>
         <td></td>
         <td></td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
       </tr>
       <tr>
         <th>13:00</th>
-        <td>&nbsp;</td>
-        <td><button class="tues4th">TBD</button></td>
-        <td>&nbsp;</td>
         <td></td>
         <td></td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
       </tr>
       <tr>
         <th>14:00</th>
-        <td>&nbsp;</td>
-        <td><button class="tues4th">TBD</button></td>
-        <td>&nbsp;</td>
         <td></td>
         <td></td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
       </tr>
       <tr>
         <th>15:00</th>
-        <td>&nbsp;</td>
-        <td><button class="tues4th">TBD</button></td>
-        <td>&nbsp;</td>
         <td></td>
         <td></td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
       </tr>
       <tr>
         <th>16:00</th>
-        <td>&nbsp;</td>
-        <td><button class="tues4th">TBD</button></td>
-        <td>&nbsp;</td>
         <td></td>
         <td></td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
       </tr>
       <tr>
         <th>17:00</th>
-        <td>&nbsp;</td>
-        <td><button class="tues4th">TBD</button></td>
-        <td>&nbsp;</td>
         <td></td>
         <td></td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
       </tr>
       <tr>
         <th>18:00</th>
-        <td>&nbsp;</td>
-        <td><button class="tues4th">TBD</button></td>
-        <td>&nbsp;</td>
         <td></td>
         <td></td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
       </tr>
       <tr>
         <th>19:00</th>
-        <td>&nbsp;</td>
-        <td><button class="tues4th">TBD</button></td>
-        <td>&nbsp;</td>
         <td></td>
         <td></td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
       </tr>
       <tr>
         <th>20:00</th>
-        <td>&nbsp;</td>
-        <td><button class="tues4th">TBD</button></td>
-        <td>&nbsp;</td>
         <td></td>
         <td></td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
       </tr>
       <tr>
         <th>21:00</th>
-        <td>&nbsp;</td>
-        <td><button class="tues4th">TBD</button></td>
-        <td>&nbsp;</td>
         <td></td>
         <td></td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
       </tr>
       <tr>
         <th>22:00</th>
-        <td>&nbsp;</td>
-        <td><button class="tues4th">TBD</button></td>
-        <td>&nbsp;</td>
         <td></td>
         <td></td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
       </tr>
       <tr>
         <th>23:00</th>
-        <td>&nbsp;</td>
-        <td><button class="tues4th">TBD</button></td>
-        <td>&nbsp;</td>
         <td></td>
         <td></td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
       </tr>
       <tr>
         <th>00:00</th>
-        <td>&nbsp;</td>
-        <td><button class="tues4th">TBD</button></td>
-        <td>&nbsp;</td>
         <td></td>
         <td></td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
       </tr>
       <tr>
         <th>01:00</th>
-        <td>&nbsp;</td>
-        <td><button class="tues4th">TBD</button></td>
-        <td>&nbsp;</td>
         <td></td>
         <td></td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
       </tr>
     </table>
     <footer>Created by John McNamara - source code:</footer>
-
-    <script src="script.js"></script>
   </body>
 </html>
