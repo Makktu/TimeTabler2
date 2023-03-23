@@ -58,7 +58,6 @@ timerBtn.addEventListener("click", () => {
 
 // ideas for this app
 // add a Pomodoro-style timer as extra functionality
-
 // programmatically add buttons to all cells in row1
 
 for (let a = 1; a < 7; a++) {
