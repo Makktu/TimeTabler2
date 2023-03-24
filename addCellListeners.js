@@ -1,6 +1,19 @@
 let allCells = document.getElementsByTagName("td");
+let loadedPage = [];
+
+function checkForSavedPage() {
+  loadedPage = JSON.parse(localStorage.getItem("pageState"));
+  return loadedPage;
+}
 
 export default function addCellListeners() {
+  // loadedPage = checkForSavedPage();
+  // if (loadedPage) {
+  //   console.log(loadedPage);
+  //   allCells = loadedPage;
+  // } else {
+  //   allCells = [...allCells];
+  // }
   [...allCells].forEach((cell, ind) => {
     cell.classList.add("active-timetable-cell");
     cell.classList.add(`unique-cell${ind}`);

@@ -13,6 +13,7 @@ window.oncontextmenu = (e) => {
   }
   let cellName = nameCells();
   console.log(e.target, cellName);
+  // check here for highlighted cells above and below
   e.target.textContent = cellName;
 };
 

@@ -1,10 +1,14 @@
 import playSound from "./sfxPlayer.js";
 import displayMessage from "./messageArea.js";
 import addCellListeners from "./addCellListeners.js";
-// import nameCells from "./nameCells.js";
+import nameCells from "./nameCells.js";
+import savePage from "./savePage.js";
+import clearTable from "./clearTable.js";
 
 const expBtn = document.querySelector(".expBtn");
 const timerBtn = document.getElementById("timerBtn");
+const saveBtn = document.getElementById("saveBtn");
+const clearBtn = document.querySelector(".clearBtn");
 
 // * identify day of the week and highlight it
 const weekday = [
@@ -21,6 +25,12 @@ let thisDay = weekday[today.getDay()];
 let todayColumn = document.getElementById(thisDay);
 todayColumn.classList.add("today");
 // *__________________________________________
+
+saveBtn.addEventListener("click", () => {
+  savePage();
+});
+
+clearBtn.addEventListener("click", clearTable);
 
 expBtn.addEventListener("click", () => {
   prompt("Choose format");
