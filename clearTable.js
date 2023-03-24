@@ -5,5 +5,5 @@ export default function clearTable() {
   console.log(finalDecision);
   if (finalDecision.toUpperCase() == "YES") {
     console.log("CLEARING...");
-  } else alert("You cancelled.");
+  } else alert("You cancelled.");b
 }
