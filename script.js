@@ -45,10 +45,3 @@ timerBtn.addEventListener("click", () => {
 
 addCellListeners();
 displayMessage("Click inside any cell to start");
-
-// things to add to this:
-// undo
-// colorpicker
-// all kinds of customization of display
-// custom times
-// month views, year views - single day views
