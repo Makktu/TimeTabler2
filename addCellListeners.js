@@ -1,22 +1,18 @@
-let allCells = document.getElementsByTagName("td");
-let loadedPage = [];
+import loadUserData from "./loadData.js";
 
-function json2array(json) {
-  let result = [];
-  let keys = Object.keys(json);
-  keys.forEach(function (key) {
-    result.push(json[key]);
-  });
-  return result;
-}
+let allCells = document.getElementsByTagName("td");
 
 function checkForSavedPage() {
-  loadedPage = JSON.parse(localStorage.getItem("pageState"));
-  loadedPage = json2array(loadedPage);
-  return loadedPage;
+  if (localStorage.getItem("pageState")) {
+    loadUserData();
+  } else return;
 }
 
-export default function addCellListeners() {
+export default function addCellListeners(savedData) {
+  // if (!savedData) {
+  //   allCells = checkForSavedPage();
+  // }
+
   [...allCells].forEach((cell, ind) => {
     cell.classList.add("active-timetable-cell");
     cell.classList.add(`unique-cell${ind}`);

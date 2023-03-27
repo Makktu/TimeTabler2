@@ -6,9 +6,6 @@ window.oncontextmenu = (e) => {
   if (e.target.classList.contains("unique-cell0")) return;
   if (e.target.textContent) {
     e.target.textContent = "";
-    if (e.target.classList.contains("clicked-cell-on")) {
-      e.target.classList.remove("clicked-cell-on");
-    }
     return;
   }
   let cellName = nameCells();
@@ -19,5 +16,5 @@ window.oncontextmenu = (e) => {
 
 export default function nameCells() {
   let cellName = prompt("What are you TimeTabling here?");
-  return cellName.toUpperCase();
+  if (cellName) return cellName.toUpperCase();
 }
