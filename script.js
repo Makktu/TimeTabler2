@@ -2,8 +2,10 @@ import playSound from "./sfxPlayer.js";
 import displayMessage from "./messageArea.js";
 import addCellListeners from "./addCellListeners.js";
 import { changeCellColor } from "./addCellListeners.js";
+import nameCells from "./nameCells.js";
 import savePage from "./savePage.js";
 import clearTable from "./clearTable.js";
+import loadData from "./loadPage.js";
 
 const expBtn = document.querySelector(".expBtn");
 const timerBtn = document.getElementById("timerBtn");
@@ -65,4 +67,5 @@ grayBtn.addEventListener("click", () => {
 });
 
 addCellListeners();
+loadData();
 displayMessage("Click inside any cell to start");
