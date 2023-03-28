@@ -4,15 +4,13 @@ let allCells = document.getElementsByTagName("td");
 
 function checkForSavedPage() {
   if (localStorage.getItem("pageState")) {
-    loadUserData();
+    allCells = loadUserData();
+    return allCells;
   } else return;
 }
 
 export default function addCellListeners(savedData) {
-  // if (!savedData) {
-  //   allCells = checkForSavedPage();
-  // }
-
+  // checkForSavedPage();
   [...allCells].forEach((cell, ind) => {
     cell.classList.add("active-timetable-cell");
     cell.classList.add(`unique-cell${ind}`);
