@@ -442,6 +442,58 @@ footer {
   transition: 0.25s;
 }
 
-.clicked-cell-on {
+.clicked-cell-yellow {
+  background: yellow;
+  color: black;
+}
+.clicked-cell-orangered {
   background: orangered;
+  color: white;
+}
+.clicked-cell-cyan {
+  background: cyan;
+  color: black;
+}
+.clicked-cell-gray {
+  background: gray;
+  color: yellow;
+}
+
+#cell-color-label {
+  margin-left: 10rem;
+  background: dodgerblue;
+  padding: 5px;
+}
+
+#pick-orangered {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  background-color: orangered;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+#pick-yellow {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  background-color: yellow;
+  cursor: pointer;
+}
+
+#pick-cyan {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  background-color: cyan;
+  cursor: pointer;
+}
+
+#pick-gray {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  background-color: gray;
+  cursor: pointer;
 }

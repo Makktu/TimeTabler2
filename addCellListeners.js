@@ -1,12 +1,11 @@
-import loadUserData from "./loadData.js";
-
 let allCells = document.getElementsByTagName("td");
 
-function checkForSavedPage() {
-  if (localStorage.getItem("pageState")) {
-    allCells = loadUserData();
-    return allCells;
-  } else return;
+let clickedCellColor = "orangered";
+
+export function changeCellColor(newCellColor) {
+  console.log(newCellColor);
+  clickedCellColor = newCellColor;
+  console.log(clickedCellColor);
 }
 
 export default function addCellListeners(savedData) {
@@ -16,12 +15,14 @@ export default function addCellListeners(savedData) {
     cell.classList.add(`unique-cell${ind}`);
     cell.addEventListener("click", () => {
       if (cell.classList[1].split("-")[1] == "cell0") return;
-      if (cell.classList.contains("clicked-cell-on")) {
-        cell.classList.remove("clicked-cell-on");
+      if (!cell.classList.contains(`clicked-cell-${clickedCellColor}`)) {
+        cell.classList.add(`clicked-cell-${clickedCellColor}`);
       } else {
-        cell.classList.add("clicked-cell-on");
+        cell.classList.remove(`clicked-cell-orangered`);
+        cell.classList.remove(`clicked-cell-cyan`);
+        cell.classList.remove(`clicked-cell-yellow`);
+        cell.classList.remove(`clicked-cell-gray`);
       }
-      console.log(cell.classList[1].split("-")[1]);
     });
   });
 }
